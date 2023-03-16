@@ -4,25 +4,82 @@
 // Importa as definições base
 @import 'base';
 
-header {
-  background-color: $light-color;
+@import 'menu';
+
+.header {
+  background-color: $info-color;
   color: $dark-color; ;
   padding: $spacing-md;
-  position: absolute;
   width: 100%;
-  nav {
-    width: 100%;
-    height: 4rem ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  .main__container {
+    padding: $spacing-md;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    li {
-        list-style: none;
-        display: none;
-        @media (min-width: 768px) {
-            display: block;
+    .main__container__text {
+      text-align: center;
+      margin-bottom: $spacing-md;
+      h1 {
+        font-size: 2rem;
+        margin-bottom: $spacing-sm;
+      }
+      .sub__title {
+        font-size: 1.5rem;
+      }
+      .bio {
+        font-size: 1rem;
+        margin-top: $spacing-sm;
+      }
+    }
+    .main__container__img {
+      img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+
+}
+
+.section {
+  padding: $spacing-md;
+  background-color: $light-color;
+
+  .section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .repos__list {
+      width: 100%;
+      span {
+        font-size: 1.2rem;
+      }
+      .progress__bar {
+        border-radius: 1rem;
+        height: 1rem;
+        padding: 5px;
+        background-color: #ccc;
+        margin-top: 0.5rem ;
+        .progress__bar__percent {
+          content: "";
+          border-radius: 1rem;
+          display: flex;
+          height: 100%;
+          width: 70%;
+          background-color: red;
         }
-        
+      }
+
     }
   }
 

@@ -1,0 +1,38 @@
+.menu__icon {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    cursor: pointer;
+    background-image: url('../icon/filter-line.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    left: 0;
+    transition: all 0.2s ease;
+    &.icon__close {
+        background-image: url('../icon/close-line.png');
+    }
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    background-color: $info-color;
+    &.is__open {
+        top: 3rem;
+        transform: translateX(0);
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        ul {
+            padding: 2rem;
+        }
+    }
+}
