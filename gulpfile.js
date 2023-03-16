@@ -51,5 +51,5 @@ function autoprefixerCss() {
 }
 
 gulp.task('watch', function() {
-    gulp.watch('./src/sass/style.scss', gulp.series('default'));
+    gulp.watch('./src/sass/*.scss', gulp.series('default'));
 });
